@@ -27,7 +27,7 @@ def post_json():
     branch_name = 'feature/' + project_key + '_' + cat + '_' + str(key_id)
     _repo_path = os.path.join('./', 'repo')
     # clone from remote
-    git_repo = git.Repo.clone_from('https://motoki@cleverdog.me:msgnxg2503@gitclb.backlog.com/git/TEST/test.git', _repo_path, branch='master')
+    git_repo = git.Repo.clone_from('https://gitclb.backlog.com/git/TEST/test.git', _repo_path, branch='master')
     # create future branch
     # origin = git_repo.remote()
     # git_repo.create_head(branch_name)
