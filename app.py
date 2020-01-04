@@ -5,7 +5,6 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 from werkzeug import secure_filename
 app = Flask(__name__)
 
-# <--プログラム-->
 
 @app.route('/')
 def index():
@@ -13,7 +12,7 @@ def index():
 
 @app.route('/post', methods=['POST'])
 def post_json():
-    return 'Hello World!'
+    return request.json, 'Hello World!'
 
 @app.route('/show-data', methods=['POST'])
 def show_json():
