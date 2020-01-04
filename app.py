@@ -12,7 +12,7 @@ def index():
 
 @app.route('/post', methods=['POST'])
 def post_json():
-    return request.json, 'Hello World!'
+    return request.id
 
 @app.route('/show-data', methods=['POST'])
 def show_json():
