@@ -25,15 +25,15 @@ def post_json():
     elif issue_type == "要望":
         cat = 'REQUEST'
     branch_name = 'feature/' + project_key + '_' + cat + '_' + str(key_id)
-    _repo_path = os.path.join('./', 'repo')
+    # _repo_path = os.path.join('./', 'repo')
     # clone from remote
-    git_repo = git.Repo.clone_from('gitclb@gitclb.git.backlog.com:/TEST/test.git', _repo_path, branch='master')
+    # git_repo = git.Repo.clone_from('gitclb@gitclb.git.backlog.com:/TEST/test.git', _repo_path, branch='master')
     # create future branch
-    origin = git_repo.remote()
-    git_repo.create_head(branch_name)
-    origin.push(branch_name)
-    os.system('rm -rf ' + _repo_path) 
-    return 'Done!'
+    # origin = git_repo.remote()
+    # git_repo.create_head(branch_name)
+    # origin.push(branch_name)
+    # os.system('rm -rf ' + _repo_path) 
+    return branch_name
 
 @app.route('/show-data', methods=['POST'])
 def show_json():
